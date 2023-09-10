@@ -1,0 +1,29 @@
+name: Pruebas Nocturnas Cypress
+
+on:
+  schedule:
+    # Ejecutar pruebas todos los días a las 4 AM (UTC)
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.16.0' 
+
+      - name: Instalar dependencias
+        run: |
+          npm ci --ignore-scripts
+          npm install
+          
+      - name: Ejecutar pruebas Cypress
+        run: |
+          npm run cy:test 

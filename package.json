@@ -4,9 +4,9 @@
   "description": "e2e Testing Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "cy:open": "cypress open",
-    "cy:test": "cypress run"
+    "cy:test": "cypress run",
+    "test": "cypress run" 
   },
   "keywords": [
     "e2e",
