@@ -30,6 +30,10 @@ This project has the objective of automating end-to-end testing using Cypress to
 
   - npm run cy:test 
 
+## Open UI Cypress ✅
+
+  - npm run cy:open 
+
 ## Automation Test Cypress 🧪 🔬 🔭 📡 
 
 <p align="center">
