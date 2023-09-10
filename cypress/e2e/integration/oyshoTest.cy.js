@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-// Definir variables de URL y título esperado
 const baseUrl = "https://www.oysho.com/es/";
 const expectedTitle =
   "OYSHO España / Spain | Deporte y Tiempo Libre | Sitio Oficial®";
@@ -9,7 +8,6 @@ const expectedUrl =
 const expectedRegister = "https://www.oysho.com/es/signup";
 const expectedLogged = "https://www.oysho.com/es/logon";
 
-// Caso de prueba
 describe("Prueba de automatización de Oysho", () => {
   beforeEach(() => {
     cy.visit(baseUrl, {
@@ -22,8 +20,6 @@ describe("Prueba de automatización de Oysho", () => {
   });
 
     it("Verificar el título de la página", () => {
-    //cy.url().should("eq", baseUrl);
-    // Verificar el título de la página solo si Cypress pudo visitarla
     cy.title().should("eq", expectedTitle);
     cy.get("#onetrust-accept-btn-handler").click();
     
@@ -31,8 +27,6 @@ describe("Prueba de automatización de Oysho", () => {
   });
 
   it("Verificar navegación", () => {
-    // Verificar el título de la página solo si Cypress pudo visitarla
-    //cy.url().should("eq", baseUrl);
     cy.get("#onetrust-accept-btn-handler").click();
     cy.get('input[placeholder="Buscar"]').click();
     cy.get('img[alt="Camiseta tirantes perfect-adapt copas"]').click();
@@ -41,7 +35,6 @@ describe("Prueba de automatización de Oysho", () => {
   });
 
   it("Registro de Usuario", () => {
-    //cy.get('button[data-testid="user-button"]').click({ multiple: true });
     cy.get("#onetrust-accept-btn-handler").click();
     cy.get('button[data-testid="user-button"]').should('be.visible').click({ multiple: true });
     cy.wait(5000);
@@ -68,7 +61,7 @@ describe("Prueba de automatización de Oysho", () => {
     cy.url().should(
       "eq",
       expectedLogged,
-      "Usuario accede a Register correctamente después del clic"
+      "Usuario inicia sesión correctamente después del clic"
     );
     cy.wait(2500)
     cy.get("#email-login").type("yegen53347@searpen.com");

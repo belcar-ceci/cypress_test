@@ -37,6 +37,7 @@ This project has the objective of automating end-to-end testing using Cypress to
 </p>
 <p align="center"><img src="./public/img/Readme.MD/TestScreen2.png?raw=true" width="50%"></a></p>
 <p align="center"><img src="./public/img/Readme.MD/TestScreen4.png?raw=true" width="50%"></a></p>
+<p align="center"><img src="./public/img/Readme.MD/TestScreen6.png?raw=true" width="50%"></a></p>
 
 ## Tools 🧰⚒️
 * Cypress
