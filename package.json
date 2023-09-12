@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:test": "cypress run",
-    "test": "cypress run" 
+    "test": "cypress run"
   },
   "keywords": [
     "e2e",
@@ -14,5 +14,8 @@
     "cypress"
   ],
   "author": "carbel",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.1.0"
+  }
 }

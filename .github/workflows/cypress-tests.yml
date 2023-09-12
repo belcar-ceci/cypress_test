@@ -19,10 +19,17 @@ jobs:
         with:
           node-version: '18.16.0' 
 
+      - name: Instalar Cypress
+        run: |
+          npm install cypress
+
       - name: Instalar dependencias
         run: |
           npm ci --ignore-scripts
           npm install
+
+      - name: Verificar instalación de Cypress
+        run: npx cypress verify
           
       - name: Ejecutar pruebas Cypress
         run: |
